@@ -1,0 +1,30 @@
+<br>
+<br>
+<br>
+<br>
+
+
+<h1>New Events</h1>
+
+<%= form_for :event, url: events_path do |f| %>
+
+	<p>
+		<%= f.label :name %><br>
+		<%= f.text_field :name %><br>
+	</p>
+	
+	<p>
+		<%= f.label :date %><br>
+		<%= f.text_field :date %><br>
+	</p>
+	
+		<p>
+		<%= f.label :alcohol_served %><br>
+		<%= f.check_box :alcohol_served  %><br>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+
+<% end %>

@@ -1,0 +1,35 @@
+<br>
+<br>
+<br>
+<br>
+
+
+<h1>New Venue</h1>
+
+<%= form_for :venue, url: venues_path do |f| %>
+
+	<p>
+		<%= f.label :name %><br>
+		<%= f.text_field :name %><br>
+	</p>
+	<p>
+		<%= f.label :city %><br>
+		<%= f.text_field :city %><br>
+	</p>
+
+	<p>
+		<%= f.label :state %><br>
+		<%= f.text_field :state %><br>
+	</p>
+	
+		<p>
+		<%= f.label :family_friendly %><br>
+		<%= f.check_box :family_friendly %><br>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+
+<% end %>
+

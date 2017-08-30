@@ -1,0 +1,36 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<h1>Editing Events</h1>
+
+<%= form_for(@event) do |f| %>
+ 
+	 	<p>
+			<%= f.label :name %><br>
+			<%= f.text_field :name %><br>
+		</p>
+
+	  <p>
+			<%= f.label :date %><br>
+			<%= f.text_field :date %><br>
+		</p>
+
+			<p>
+			<%= f.label :alcohol_served %><br>
+			<%= f.text_field :alcohol_served %><br>
+		</p>
+
+	   <p>
+	    <%= f.submit 'Edit Event'%>
+	  </p>
+
+<% end %>
+
+<%= link_to 'Event Lists', events_path %> | <%= link_to 'Delete Event', @event, method: :delete, data: { confirm: 'Are you sure want to delete this event?' } %>

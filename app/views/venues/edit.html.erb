@@ -1,0 +1,40 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<h1>Editing Venue</h1>
+
+<%= form_for(@venue) do |f| %>
+ 
+  <p>
+		<%= f.label :name %><br>
+		<%= f.text_field :name %><br>
+	</p>
+	<p>
+		<%= f.label :city %><br>
+		<%= f.text_field :city %><br>
+	</p>
+	
+	<p>
+		<%= f.label :state %><br>
+		<%= f.text_field :state %><br>
+	</p>
+
+		<p>
+		<%= f.label :family_friendly %><br>
+		<%= f.text_field :family_friendly %><br>
+	</p>
+
+   <p>
+    <%= f.submit 'Edit Venue'%>
+  </p>
+
+<% end %>
+
+<%= link_to 'Venue Lists', venues_path %> | <%= link_to 'Delete Venue', @venue, method: :delete, data: { confirm: 'Are you sure want to delete this Venue?' } %>
